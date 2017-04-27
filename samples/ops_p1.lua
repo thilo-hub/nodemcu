@@ -1,3 +1,12 @@
+--
+-- add some functions to the mqtt interpreter
+--
+--
+-- these can then be called using:
+--
+-- mosquitto_pub -h mqtt-server  -t "node" -m "node-id {function} [parameter]"
+--
+
 mq_ops["test"] = function(msg)
 	m:publish(chn,id .. " testing" ,qos,0)
 end

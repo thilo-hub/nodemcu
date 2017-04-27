@@ -1,3 +1,12 @@
+--
+-- This file will only be loaded on a node with the same name as the file
+--
+
+-- it adds a function "relay" to the mqq processor
+--  which sets the gpio connected relay
+--
+
+
 T=500000
 fz={}
 LED=4

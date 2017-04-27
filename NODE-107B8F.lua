@@ -1,3 +1,11 @@
+--
+-- This file will only be loaded on a node with the same name as the file
+--
+-- it add a new function to the gpio's which sends a message
+-- if the button is pressed
+
+-- debouncing is crap -- needs fixing
+
 T=500000
 LED=4
 BUTTON=1

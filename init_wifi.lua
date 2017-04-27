@@ -1,3 +1,7 @@
+--
+-- Initial wifi connection
+--
+
 wifi.sta.eventMonReg(wifi.STA_CONNECTING, function(previous_state)
     if(previous_state==wifi.STA_GOTIP) then 
         print("Station lost connection with access point. Attempting to reconnect...")

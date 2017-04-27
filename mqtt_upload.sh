@@ -1,4 +1,11 @@
 #!/bin/sh
+#
+# Utility to upload files to a node
+#
+# Usage: $0  {node-name} {file-name} [start]
+#        the optional start parameter will execute the file
+#
+#  
 NODE=$1
 FILE=$2
 

@@ -1,3 +1,9 @@
+--
+-- init.lua is loaded at node-start
+--
+-- it will include all files init_*
+--
+--
 station_cfg={}
 station_cfg.ssid="here"
 station_cfg.pwd= -------------

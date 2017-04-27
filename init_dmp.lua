@@ -1,3 +1,8 @@
+--
+--
+--  Helper function which dumps a variable
+-- any variable
+
 function dmp(var)
 	local dne={}
 	function _dmp(m,var)

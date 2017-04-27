@@ -1,3 +1,10 @@
+--
+--  Initilize the mqtt subsystem
+
+-- subscribe to the control channel
+-- and execute the functions listed in the table mq_ops[]
+--
+--
 srvr="ts2.nispuk.com"
 srvr="192.168.0.11"
 chn="node"
@@ -22,6 +29,18 @@ m:on("connect",
      m:publish(chn,"Hello " .. sys_version .. " "  .. id .. " " .. wifi.sta.getip() ,qos,0)
    end
 )
+
+
+--
+-- Functions:
+--   open  {filename}:  open a file for writing
+--   bwrite {data}:     decodes base64 data and writes to file
+--   close             : finish writing
+--   dofile {filename} : execute file
+--   set HIGH|---      : sets gpio
+--   status            : returns gpio value
+--   reset             : reboot node
+
 mq_ops = {
 open = function(msg) fh=file.open(msg,"w") 
 	end,
@@ -49,6 +68,7 @@ status = function(msg)
 reset = function() node.restart() end,
 }
 
+-- function parser for mqtt messages
 parse = function (a,b,msg) 
 	-- print ("X-C:",a) 
 	print ("T:",b , msg) 

@@ -33,8 +33,9 @@ m:on("connect",
 
 --
 -- Functions:
---   open  {filename}:  open a file for writing
---   bwrite {data}:     decodes base64 data and writes to file
+--   open  {filename}  : open a file for writing
+--   bwrite {data}     : decodes base64 data and writes to file
+--   write {data}      : upload plain data and writes to file
 --   close             : finish writing
 --   dofile {filename} : execute file
 --   set HIGH|---      : sets gpio
